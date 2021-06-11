@@ -1,72 +1,44 @@
 package question2;
 
 
-/**
- * Classe-test FahrenheitCelsiusTest.
- *
- * @author  (votre nom)
- * @version (un numéro de version ou une date)
- *
- * Les classes-test sont documentées ici :
- * http://junit.sourceforge.net/javadoc/junit/framework/TestCase.html
- * et sont basées sur le document © 2002 Robert A. Ballance intitulé
- * «JUnit: Unit Testing Framework».
- *
- * Les objets Test (et TestSuite) sont associés aux classes à tester
- * par la simple relation yyyTest (e.g. qu'un Test de la classe Name.java
- * se nommera NameTest.java); les deux se retrouvent dans le même paquetage.
- * Les "engagements" (anglais : "fixture") forment un ensemble de conditions
- * qui sont vraies pour chaque méthode Test à exécuter.  Il peut y avoir
- * plus d'une méthode Test dans une classe Test; leur ensemble forme un
- * objet TestSuite.
- * BlueJ découvrira automatiquement (par introspection) les méthodes
- * Test de votre classe Test et générera la TestSuite conséquente.
- * Chaque appel d'une méthode Test sera précédé d'un appel de setUp(),
- * qui réalise les engagements, et suivi d'un appel à tearDown(), qui les
- * détruit.
- */
-public class FahrenheitCelsiusTest extends junit.framework.TestCase
-{
-    // Définissez ici les variables d'instance nécessaires à vos engagements;
-    // Vous pouvez également les saisir automatiquement du présentoir
-    // à l'aide du menu contextuel "Présentoir --> Engagements".
-    // Notez cependant que ce dernier ne peut saisir les objets primitifs
-    // du présentoir (les objets sans constructeur, comme int, float, etc.).
 
+import static org.junit.jupiter.api.Assertions.*;
+import org.junit.jupiter.api.AfterEach;
+import org.junit.jupiter.api.BeforeEach;
+import org.junit.jupiter.api.Test;
+
+/**
+ * The test class FahrenheitCelsiusTest.
+ *
+ * @author  (your name)
+ * @version (a version number or a date)
+ */
+public class FahrenheitCelsiusTest
+{
     /**
-     * Constructeur de la classe-test FahrenheitCelsiusTest
+     * Default constructor for test class FahrenheitCelsiusTest
      */
     public FahrenheitCelsiusTest()
     {
     }
 
     /**
-     * Met en place les engagements.
+     * Sets up the test fixture.
      *
-     * Méthode appelée avant chaque appel de méthode de test.
+     * Called before every test case method.
      */
-    protected void setUp() // throws java.lang.Exception
+    @BeforeEach
+    public void setUp()
     {
-        // Initialisez ici vos engagements
-
     }
 
     /**
-     * Supprime les engagements
+     * Tears down the test fixture.
      *
-     * Méthode appelée après chaque appel de méthode de test.
+     * Called after every test case method.
      */
-    protected void tearDown() // throws java.lang.Exception
+    @AfterEach
+    public void tearDown()
     {
-        //Libérez ici les ressources engagées par setUp()
     }
-
-    /**
-     * Il ne vous reste plus qu'à définir une ou plusieurs méthodes de test.
-     * Ces méthodes doivent vérifier les résultats attendus à l'aide d'assertions
-     * assertTrue(<boolean>).
-     * Par convention, leurs noms devraient débuter par "test".
-     * Vous pouvez ébaucher le corps grâce au menu contextuel "Enregistrer une méthode de test".
-     */
-
 }
